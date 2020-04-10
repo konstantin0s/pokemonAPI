@@ -44,8 +44,8 @@ componentDidMount() {
         const { pokemons, isLoading } = this.state;
 
         return (
-            <div>
-                   <h2>up and runnign</h2>
+            <div className="grid-column">
+            
 
                          {
           isLoading ?  <p>Loading..</p> :
@@ -53,11 +53,7 @@ componentDidMount() {
            <ChildPoke key={pokemon.name}  pokemon={pokemon} />
         ))
          }
-                   
-                   {/* {this.state.pokemons.map((pokemon) => (
-                          <ChildPoke key={pokemon.name}  pokemon={pokemon} />
-                   )
-                   )} */}
+                
             </div>
         )
     }

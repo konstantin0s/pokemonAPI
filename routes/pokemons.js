@@ -22,11 +22,15 @@ router.get('/pokemons', (req, res, next) => {
 
 
 router.get('/randomPokemon', (req, res, next) => {
-      apiUrl.getRandom()
+      axios.get(apiUrl).getRandom()
   .then(pokemons => {
-    res.render('randomPokemon', {
-      pokemon: pokemons[0]
-    })
+
+    var pokemons = response.data;
+    res.json({pokemon: pokemons[0]});
+    console.log(pokemons)
+    // res.render('randomPokemon', {
+    //   pokemon: pokemons[0]
+    // })
   })
 //   res.render('randomPokemon', {
 //     // pokemon: pokemons[0];

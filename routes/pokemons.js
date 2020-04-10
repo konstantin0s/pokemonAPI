@@ -13,9 +13,9 @@ router.get('/pokemons', (req, res, next) => {
      axios.get(`${apiUrl}`).then(function (response) {
 
     var pokemons = response.data;
-    // res.json(pokemons);
+    res.json(pokemons);
     console.log(pokemons)
-    res.render('pokemons', {pokemons})
+    // res.render('pokemons', {pokemons})
   })
 });
 
